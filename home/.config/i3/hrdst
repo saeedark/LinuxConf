@@ -1,0 +1,16 @@
+#! /bin/bash
+
+vall="$(sudo hdparm -C /dev/sda | grep state | cut -c19-)"
+stn="standby"
+ac="active/idle"
+
+
+if [ $vall = $stn ];
+then 
+	echo "sleep"
+elif [ $vall = $ac ];
+then
+	echo "active"
+else
+	echo "unknown"
+fi
