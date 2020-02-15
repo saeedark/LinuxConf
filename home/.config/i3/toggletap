@@ -1,0 +1,12 @@
+#!/bin/bash
+touchpadid="$(xinput list | grep Touchpad | cut -c55-56)"
+tapid="$(xinput list-props $touchpadid | grep -m1 "libinput Tapping Enabled" | cut -c28-30
+)"
+status="$(xinput list-props $touchpadid| grep $tapid | cut -c34)"
+
+ if [ $status = "0" ];
+then
+    exec xinput set-prop $touchpadid $tapid 1
+else
+    exec xinput set-prop $touchpadid $tapid 0
+fi
