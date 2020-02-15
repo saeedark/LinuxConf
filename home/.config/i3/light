@@ -1,0 +1,18 @@
+#!/bin/bash
+
+light="$(xbacklight | cut -d'.' -f1-1)"
+echo $light%
+echo $light%
+
+# color
+if [[ $light -ge 80 ]]; then
+    echo "#FFFFFF"
+elif [[ $light -ge 60 ]]; then
+    echo "#EEEEEE"
+elif [[ $light -ge 40 ]]; then
+    echo "#DDDDDD"
+elif [[ $light -ge 20 ]]; then
+    echo "#CCCCCC"
+elif [[ $light -ge 0 ]]; then
+    echo "#BBBBBB"
+fi
