@@ -1,0 +1,3 @@
+#!/bin/bash
+dirt="$(cat /proc/vmstat | grep nr_dirty | head -1 | cut -c10-)"
+echo $dirt
