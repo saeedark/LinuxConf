@@ -1,0 +1,82 @@
+MainWindow #translateLine, ScanPopup #translateLine, MainWindow #wordList, MainWindow #dictsPane #dictsList, MainWindow #historyPane #historyList, MainWindow #favoritesPane #favoritesTree
+{
+  background: #101010;
+  color: white;
+}
+MainWindow #menubar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                      stop:0 #202020, stop:0.5 #101010, stop:0.9 #151515, stop:1 #202020);
+}
+MainWindow #menubar::item {
+    background: transparent;
+}
+MainWindow #translateLine[noResults="true"],
+ScanPopup #translateLine[noResults="true"]
+{
+  background: #202020;
+  color: white;
+}
+MainWindow #menubar::item:selected { /* when selected using mouse or keyboard */
+    background: #505050;
+}
+MainWindow #menubar::item:pressed {
+    background: #404040;
+}
+MainWindow #centralWidget QTabBar::tab {
+    border: 1px solid #667B9B;
+    border-bottom-color: #667B9B;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 1px 3px;
+    margin-left: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #141414;
+    color: darkslategray;
+}
+MainWindow #centralWidget QTabBar::tab:selected {
+    background-color: #141414;
+    color: #fff;
+    border-bottom-style: none;
+}
+ArticleView #searchFrame QMenu {background-color: none}
+ArticleView QMenu {background-color: none}
+MainWindow #dictionaryBar QToolTip {
+   background: #181818;
+   color: white;
+   border-style: none;
+}
+QMainWindow::separator {
+     width:  1px; /* when vertical */
+     height: 1px; /* when horizontal */
+}
+#dictsPaneTitleBar {
+  background: #171717;
+  margin: 2px;
+}
+/* Colored header for the History Pane */
+#historyPaneTitleBar {
+  background: #181818;
+  margin: 2px;
+}
+
+MainWindow #historyPane #historyList, MainWindow #favoritesPane #favoritesTree {
+   background: 	#191919;
+   color: #52627C;
+}
+
+MainStatusBar #text
+{
+  background: #151515;
+  color: #fff;
+}
+
+ScanPopup #outerFrame
+{
+   background-color: #CEDDEF;
+}
+
+ScanPopup #dictionaryBar
+{
+   background: #171717;
+}
