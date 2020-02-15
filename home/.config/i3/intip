@@ -1,0 +1,4 @@
+#! /bin/bash
+
+$vall="$(curl ifconfig.me/ip)"
+echo hello
