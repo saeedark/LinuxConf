@@ -1,0 +1,19 @@
+#!/bin/bash
+st="$(protonvpn s | grep -A 0 Status | cut -c13-)"
+dis="Disconnected"
+co="Connected"
+if [ $st = $co ];
+then
+	echo ""
+	echo "Connected"
+	echo "#00FF00"
+elif [ $st = $dis ];
+then
+	echo ""
+	echo "Disconnected"
+	echo "#FF0000"
+else
+	echo ""
+	echo "What the fuck boy"
+	echo "#FFFF00"
+fi
