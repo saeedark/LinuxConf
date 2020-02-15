@@ -1,0 +1,21 @@
+#!/bin/bash
+
+FILE=~/.~resolv.conf
+if [ -f "$FILE" ]; then
+#	echo "TTP is on"
+#	echo ""
+#	echo ""
+#echo ""
+#echo ""
+#	echo ""
+#	echo ""
+	echo ""
+	echo ""
+	echo "#00FF00"
+else
+	echo ""
+	echo ""
+	echo "#FF0000"
+#	echo "TTP is off"
+
+fi
