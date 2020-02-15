@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# status="$(xinput list-props 11 | grep 279 | cut -c34)"
+#
+#  if [ $status = "0" ];
+# then
+#     exec xinput set-prop 11 279 1
+# else
+#     exec xinput set-prop 11 279 0
+# fi
+
+touchpadid="$(xinput list | grep Touchpad | cut -c55-56)"
+tapid="$(xinput list-props $touchpadid | grep -m1 "libinput Tapping Enabled" | cut -c28-30
+)"
+#status="$(xinput list-props 11 | grep 276 | cut -c34)"
+status="$(xinput list-props $touchpadid | grep $tapid | cut -c34)"
+
+tapon="1"
+tapoff="0"
+if [ $status = $tapon ];
+then
+  echo ""
+elif [ $status = $tapoff ];
+then
+  echo ""
+else
+  echo "unknown  ${status}"
+fi
