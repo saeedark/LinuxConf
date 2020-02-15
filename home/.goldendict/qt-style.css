@@ -1,0 +1,196 @@
+MainWindow {
+    background-color: #181818;
+}
+MainWindow #translateLine, ScanPopup #translateLine, MainWindow #wordList, MainWindow #dictsPane #dictsList, MainWindow #historyPane #historyList, MainWindow #favoritesPane #favoritesTree
+{
+  background: #101010;
+  color: white;
+}
+MainWindow #menubar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                      stop:0 #202020, stop:0.5 #101010, stop:0.9 #151515, stop:1 #202020);
+    color: white;
+}
+MainWindow #translateLine[noResults="true"],
+ScanPopup #translateLine[noResults="true"]
+{
+  background: #202020;
+  color: white;
+}
+MainWindow #dictionaryBar::item #navToolbar::item #menubar::item {
+    background: transparent;
+}
+MainWindow #scanPopupButton #dictionaryBar::item:selected #navToolbar::item:selected #menubar::item:selected { /* when selected using mouse or keyboard */
+    background: #505050;
+    color: white;
+}
+MainWindow #dictionaryBar::item:pressed #navToolbar::item:pressed #menubar::item:pressed {
+    background: #404040;
+    color: white;
+}
+MainWindow #centralWidget QTabBar::tab {
+    border: 1px solid #667B9B;
+    border-bottom-color: #667B9B;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 1px 3px;
+    margin-left: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #141414;
+    color: darkslategray;
+}
+MainWindow #centralWidget QTabBar::tab:selected {
+    background-color: #141414;
+    color: #fff;
+    border-bottom-style: none;
+}
+MainWindow QMenu {
+  background-color: #101010;
+  color: white;
+}
+ArticleView #searchFrame QMenu {
+  background-color: #101010;
+  color: white;
+}
+ArticleView QMenu {
+  background-color: #101010;
+  color: white;
+}
+MainWindow #dictionaryBar QToolTip {
+   background: #181818;
+   color: white;
+   border-style: none;
+}
+MainWindow #dictionaryBar{
+   background: #101010;
+   color: white;
+}
+MainWindow #navToolbar QToolTip {
+   background: #181818;
+   color: white;
+   border-style: none;
+}
+MainWindow #navToolbar{
+   background: #101010;
+   color: white;
+}
+
+#historyPaneTitleBar, #favoritesPaneTitleBar, #dictsPaneTitleBar  {
+  background: #181818;
+  margin: 2px;
+  color: #eeeeee;
+}
+
+MainWindow #dictsPane ,#historyPane ,#historyList, MainWindow #favoritesPane #favoritesTree {
+   background: 	#191919;
+   color: #eeeeee;
+}
+
+MainStatusBar #text
+{
+  background: #151515;
+  color: #fff;
+}
+
+ScanPopup #outerFrame
+{
+   background-color: #404040;
+   color: white;
+}
+
+ScanPopup #dictionaryBar
+{
+   background: #171717;
+   color: white;
+}
+#navToolbar GroupComboBox
+{
+  border: 1px solid black;
+  border-right: 1px transparent;
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 2px 4px 2px 4px;
+  color: white;
+  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #202020, stop: 0.4 #101010,
+                              stop: 0.5 #151515, stop: 1.0 #202020);
+}
+#navToolbar GroupComboBox:on {
+  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #181818, stop: 0.4 #101010,
+                              stop: 0.5 #111111, stop: 1.0 #202020);
+}
+#navToolbar GroupComboBox::drop-down {
+   subcontrol-origin: padding;
+   subcontrol-position: top right;
+   width: 15px;
+   border-left: 1px solid darkgray;
+   border-right: 1px transparent;
+   background: black;
+   color: white;
+}
+ArticleView #searchText[noResults="true"]
+{
+  background: #000000;
+  color: white;
+}
+ScanPopup GroupComboBox
+{
+  margin: 0px 0px 0px 1px;
+  padding: 1px 4px 1px 4px;
+  border: 1px solid gray;
+  border-right: 1px transparent;
+  border-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #000000, stop: 0.4 #101010,
+                              stop: 0.5 #151515, stop: 1.0 #101010);
+  background: black;
+  color: white;
+}
+
+ScanPopup GroupComboBox:on {
+  padding: 3px 3px 1px 5px;
+  background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #000000, stop: 0.4 #101010,
+                              stop: 0.5 #151515, stop: 1.0 #101010);
+  background: black;
+  color: white;
+}
+
+ScanPopup GroupComboBox::drop-down {
+   subcontrol-origin: padding;
+   subcontrol-position: top right;
+   width: 15px;
+   border-left: 1px solid darkgray;
+   border-right: 1px transparent;
+   background: black;
+   color: white;
+}
+.ScanPopup #outerFrame
+{
+  border: 1px solid palette(dark);
+}
+
+.ScanPopup MainStatusBar #text
+{
+  border-bottom: 1px solid palette(dark);
+}
+
+.ScanPopup MainStatusBar[hasImage="false"] #text
+{
+  border-left: 1px solid palette(dark);
+}
+
+.ScanPopup MainStatusBar #icon
+{
+  border-left: 1px solid palette(dark);
+  border-bottom: 1px solid palette(dark);
+}
+#navToolbar #menuButtonXX, #navToolbar #soundButtonXX, #navToolbar #backButtonXX, #navToolbar #forwardButtonXX, #navToolbar #zoomInButtonXX, #navToolbar #zoomOutButtonXX, #navToolbar #zoomBaseButtonXX, #navToolbar #saveArticleButton, #navToolbar #printButton {
+  background: black;
+  color: white;
+}
