@@ -244,6 +244,12 @@ let g:livepreview_engine = 'xelatex'
 let g:livepreview_cursorhold_recompile = 0
 
 
+"set swapfile Directory
+set swapfile
+set dir=~/Temp/Vim
+
+
+
 "
 set number
 set autoindent
@@ -283,4 +289,5 @@ function! Fff()
   return txt
 endfunction
 set foldtext=Fff()
+
 
