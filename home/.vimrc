@@ -246,8 +246,10 @@ let g:livepreview_cursorhold_recompile = 0
 
 "set swapfile Directory
 set swapfile
-set dir=~/Temp/Vim
-
+set dir=~/Temp/Vim/
+set backupdir=~/Temp/Vim//
+set directory=~/Temp/Vim//
+set undodir=~/Temp/Vim//
 
 
 "
