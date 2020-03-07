@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+
+if ! [ $(id -u) = 0 ]; then
+   echo "not root. exiting..."
+   exit 1
+fi
+
+sudo iptables-restore < ~/.~iptable
+sudo cp ~/.~resolv.conf /etc/resolv.conf
+sudo rm ~/.~resolv.conf
+sudo rm ~/.~iptable
