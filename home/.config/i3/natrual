@@ -1,0 +1,6 @@
+#!/bin/bash
+touchpadid="$(xinput list | grep Touchpad | cut -c55-56)"
+scrollid="$(xinput list-props 12 | grep -m1 "libinput Natural Scrolling Enabled" | cut -d "(" -f2 | cut -d ")" -f1)"
+
+exec xinput set-prop $touchpadid $scrollid 1
+

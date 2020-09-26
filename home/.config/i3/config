@@ -205,13 +205,13 @@ bar {
 bindsym $mod+shift+x exec i3lock -i /home/saeed/Pictures/Wallpaper/wallpaper.png
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume "$(pactl list sinks | grep "Sink " | cut -c7-)" +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume "$(pactl list sinks | grep "Sink " | cut -c7-)" -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute "$(pactl list sinks | grep "Sink " | cut -c7-)" toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec sudo brightnessctl set 5%+ # increase screen brightness
+bindsym XF86MonBrightnessDown exec sudo brightnessctl set 5%- # decrease screen brightness
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -234,7 +234,7 @@ exec_always feh --bg-fill /home/saeed/Pictures/Wallpaper/wallpaper.png
 
 
 #applying fading
-exec_always compton -f -D 1 -I 0.01 -O 0.01
+#exec_always compton -f -D 1 -I 0.01 -O 0.01
 
 #running NetworkManager applet
 exec nm-applet
@@ -268,8 +268,8 @@ exec fusuma -d -c /home/saeed/.config/fusuma/i3config.yml
 bindsym $mod+t exec /home/saeed/.config/i3/toggletap
 
 #adding mlterm and terminator to shortcut
-bindsym $mod+Shift+t exec terminator
-bindsym $mod+Shift+Return exec mlterm
+#bindsym $mod+Shift+t exec terminator
+#bindsym $mod+Shift+Return exec mlterm
 
 #volume applet
 exec pasystray
@@ -279,7 +279,7 @@ exec pasystray
 #Now I'm using Joplin ;)
 
 #running Blueman applet
-exec blueman-applet
+#exec blueman-applet
 
 #turning hard off at start up
 #exec_always sudo /home/saeed/.config/i3/hrdoff
@@ -307,16 +307,22 @@ bindsym mod1+KP_Add exec playerctl play-pause
 #xrandr --output <output> --primary
 
 
-
+## Dmenu staffs
 #run goldendict pop with a searche #todo find a way to run pop with out a word
 #bindsym $mod+g exec --no-startup-id goldendict a
+bindsym $mod+g exec --no-startup-id /home/saeed/.config/i3/GG
+
+#mount Drives and unmount
+bindsym $mod+m exec --no-startup-id /home/saeed/.config/i3/MM
+bindsym $mod+shift+m exec --no-startup-id /home/saeed/.config/i3/UM
 
 #enable natrul scrolling for fucking stupid friend who are anoyed by this bullshit
-exec xinput set-prop 11 295 1
+#exec xinput set-prop 11 295 1
 
 #Run mailSpring Email Client and evolution
 exec mailspring
-exec evolution
+#exec evolution
+exec --no-startup-id /home/saeed/.config/i3/natrual
 
 #Disable border for apps 
 for_window [class="Spotify"] border pixel 0
@@ -326,3 +332,4 @@ for_window [class="Spotify"] border pixel 0
 #for_window [class="GoldenDict"] border pixel 0
 #for_window [class="Gmusicbrowser"] border pixel 0
 for_window [class="Terminator"] border pixel 0
+

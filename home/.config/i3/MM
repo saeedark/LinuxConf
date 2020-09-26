@@ -1,0 +1,13 @@
+#!/bin/sh
+
+mountable=$(lsblk -lp | grep "part $" | awk '{print $1, "(" $4 ")"}' | grep -v -e nvme0n1p3 -e nvme0n1p1)
+nval=""
+if [ "$mountable" != "$nval" ];
+then
+    chosen=$(echo "$mountable" | dmenu -i -p "Mount" | awk '{print $1}' )
+fi
+if [ "$chosen" != "$nval" ];
+then
+    udisksctl mount -b "$chosen"
+fi
+

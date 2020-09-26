@@ -1,0 +1,7 @@
+#!/bin/bash
+val="$(cat /home/saeed/.config/i3/HeadWordsOfWordNet3 | dmenu -i -p "GoldenDict")"
+nval=""
+if [ "$val" != "$nval" ];
+then
+	goldendict "$val"
+fi

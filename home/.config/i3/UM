@@ -1,0 +1,13 @@
+#!/bin/sh
+
+mountable=$(lsblk -lp | grep "part /" | awk '{print $1, "(" $4 ")"}' | grep -v -e nvme0n1p3 -e nvme0n1p1 -e nvme0n1p2 -e loop)
+nval=""
+if [ "$mountable" != "$nval" ];
+then
+    chosen=$(echo "$mountable" | dmenu -i -p "UnMount" | awk '{print $1}' )
+fi
+if [ "$chosen" != "$nval" ];
+then
+    udisksctl unmount -b "$chosen"
+fi
+

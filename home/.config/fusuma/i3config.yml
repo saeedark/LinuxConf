@@ -25,10 +25,10 @@ pinch:
 
 threshold:
   swipe: 0.4
-  pinch: 0.4
+  pinch: 0.6
 
 interval:
   swipe: 0.8
-  pinch: 0.1
+  pinch: 0.4
 #command: 'xdotool key ctrl+alt+Down'
 #command: 'xdotool key ctrl+alt+Up'
