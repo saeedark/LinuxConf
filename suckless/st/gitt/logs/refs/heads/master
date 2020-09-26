@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 fa253f077f19b3220c7655b81bd91e52f4367803 saeed <saeed.ali.rahimi@gmail.com> 1601019351 +0330	clone: from http://git.suckless.org/st
+fa253f077f19b3220c7655b81bd91e52f4367803 68983976ba39630f04a2c0d123e97171baf71773 saeed <saeed.ali.rahimi@gmail.com> 1601019406 +0330	commit: first
+68983976ba39630f04a2c0d123e97171baf71773 130718f80da039423faf8b803b8bac3a95bfe668 saeed <saeed.ali.rahimi@gmail.com> 1601019541 +0330	commit: font
+130718f80da039423faf8b803b8bac3a95bfe668 868a1e5aae3be2b9cd59abebd8eb1247927de9d2 saeed <saeed.ali.rahimi@gmail.com> 1601019597 +0330	commit: scroll
+868a1e5aae3be2b9cd59abebd8eb1247927de9d2 67dbfe8ab1a836f3a2f4f3f3e149d0cce004a65d saeed <saeed.ali.rahimi@gmail.com> 1601019614 +0330	commit: liga
+67dbfe8ab1a836f3a2f4f3f3e149d0cce004a65d b4917512ddbb9c447b65e282d41e340aa86e1e53 saeed <saeed.ali.rahimi@gmail.com> 1601019635 +0330	commit: any
+b4917512ddbb9c447b65e282d41e340aa86e1e53 d32b066cd14592649ff5e7989dec1507f5351d3d saeed <saeed.ali.rahimi@gmail.com> 1601019647 +0330	commit: bold
+d32b066cd14592649ff5e7989dec1507f5351d3d f8294ca33622ca7ea075046d2f772e53721ccf13 saeed <saeed.ali.rahimi@gmail.com> 1601019667 +0330	commit: clip
+f8294ca33622ca7ea075046d2f772e53721ccf13 8337bc27da5404cb5a915b96abd0db2ebe4b02a3 saeed <saeed.ali.rahimi@gmail.com> 1601022343 +0330	commit: Poweline and zoom and scroll
