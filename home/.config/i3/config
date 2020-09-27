@@ -222,6 +222,10 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+#ScreenShot 
+bindsym Print exec gnome-screenshot
+bindsym $mod+Print exec gnome-screenshot -i 
+
 #key indicator
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
